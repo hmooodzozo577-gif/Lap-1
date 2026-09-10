@@ -9,9 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.math.BigDecimal;
 
-// Activity 2 - Question 1
-// Distance Converter built with FlowLayout only.
-// Converts miles entered by the user into kilometers.
 public class DistanceConverterFlow extends JFrame implements ActionListener {
 
     private JLabel milesLabel;
@@ -19,7 +16,6 @@ public class DistanceConverterFlow extends JFrame implements ActionListener {
     private JButton convertButton;
     private JTextArea resultArea;
 
-    // 1 mile = 1.60934 kilometers
     private static final BigDecimal MILES_TO_KM = new BigDecimal("1.60934");
 
     public DistanceConverterFlow() {
@@ -28,7 +24,6 @@ public class DistanceConverterFlow extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // The whole frame uses FlowLayout.
         setLayout(new FlowLayout());
 
         milesLabel = new JLabel("Distance in miles:");

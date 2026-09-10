@@ -11,10 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.math.BigDecimal;
 
-// Activity 2 - Question 2
-// Distance Converter built with a combination of BorderLayout and FlowLayout.
-// NORTH: a FlowLayout panel with the label, text field and button.
-// CENTER: the text area showing the conversion results.
 public class DistanceConverterBorderFlow extends JFrame implements ActionListener {
 
     private JLabel milesLabel;
@@ -22,7 +18,6 @@ public class DistanceConverterBorderFlow extends JFrame implements ActionListene
     private JButton convertButton;
     private JTextArea resultArea;
 
-    // 1 mile = 1.60934 kilometers
     private static final BigDecimal MILES_TO_KM = new BigDecimal("1.60934");
 
     public DistanceConverterBorderFlow() {
@@ -31,10 +26,8 @@ public class DistanceConverterBorderFlow extends JFrame implements ActionListene
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // The main frame uses BorderLayout.
         setLayout(new BorderLayout());
 
-        // NORTH panel uses FlowLayout for the label, text field and button.
         JPanel northPanel = new JPanel(new FlowLayout());
         milesLabel = new JLabel("Distance in miles:");
         milesField = new JTextField(8);
@@ -45,7 +38,6 @@ public class DistanceConverterBorderFlow extends JFrame implements ActionListene
         northPanel.add(milesField);
         northPanel.add(convertButton);
 
-        // CENTER area shows the conversion results.
         resultArea = new JTextArea();
         resultArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(resultArea);
